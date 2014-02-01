@@ -1,4 +1,3 @@
-
 def queensproblem(rows, columns):
     solutions = [[]]
     for row in range(rows):
@@ -12,7 +11,7 @@ def add_one_queen(new_row, columns, prev_solutions):
             if no_conflict(new_row, new_column, solution)]
  
 def no_conflict(new_row, new_column, solution):
-    return all(solution[row]       != new_column           and
+    return all(solution[row]!= new_column           and
                solution[row] + row != new_column + new_row and
                solution[row] - row != new_column - new_row
                for row in range(new_row))
